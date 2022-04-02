@@ -9,11 +9,13 @@ def main():
 
     bs = BeautifulSoup(page.content, 'html.parser')
 
-    opinion = bs.find( 'div', class_="user-post")
-    content = opinion.find( 'div', class_="user-post__text").get_text().strip()
-    print(content)
+    COUNTER = 1
 
-
+    for opinion in bs.find_all('div',class_="user-post"):
+        content = opinion.find('div',class_="user-post__text").get_text().strip()
+        print(f'{COUNTER}.{content}')
+        COUNTER+=1 
+        if COUNTER > 10:break
 
 if __name__ == "__main__":
     main()
