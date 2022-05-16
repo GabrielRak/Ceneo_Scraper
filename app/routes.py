@@ -1,8 +1,9 @@
 from app import app
+from flask import render_template
 
 greeting = "Hello flask"
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return greeting
+    return render_template("subpages/index.html.jinja")
