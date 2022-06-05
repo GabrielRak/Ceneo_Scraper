@@ -6,13 +6,15 @@
 {%block navbar_content%}
 
     <a href="/">Home</a>
-    <a href="/extract_form">Extract form</a>
+    <a href="/extract_form">Ekstrakcja produktu</a>
 
 {%endblock%}
 {%block container%}
     <div class="d-flex flex-column text-center">
-    <h1>{{product_name}}</h1>   
-    <h3>{{data.avg_stars}}</h3>
-    <h3>{{data.avg_recommendations}}</h3>
+    <img src="../../static/assets/icons8-coins-100.png" class="mx-auto" width="100px" height="100px"/>
+    <h1 style="color:orange">{{product_name}}</h1>   
+    <span>Średnia ilośc gwiazdek:{{data.avg_stars}}</span>
+    <span>Polecana przez {{data.avg_recommendations}}% kupujących</span>
+    <img class="img-fluid" src={{plot}}/>
     </div>
 {%endblock%}

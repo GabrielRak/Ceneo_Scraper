@@ -1,22 +1,23 @@
 {% extends "base.html.jinja" %}
 {%block head%}
     <title>Extract Form</title>
-    <link rel="stylesheet" href="../static/extract_form.css"/>
+    <link rel="stylesheet" href="../static/form.css"/>
 {%endblock%}
 {%block navbar_content%}
 
     <a href="/">Home</a>
-    <a href="/products">Products</a>
+    <a href="/products">Produkty</a>
 
 {%endblock%}
 {%block container%}
-
+    <div class="container text-center">
+    <img src="../../static/assets/icons8-coins-100.png" width="100px" height="100px"/>
     <form method="POST" class="text-center">
-        <label for="product_id">Product ID</label><br/>
+        <label for="product_id">Id produktu</label><br/>
         <input type="text" name="product_id" id="product_id" placeholder="1569519*" class="text-center"/><br/>        
-        <label for="product_name">Product name</label><br/>
+        <label for="product_name">Nazwa produktu</label><br/>
         <input type="text" name="product_name" id="product_name" placeholder="Scyzoryk*" class="text-center"/><br/>
-        <input type="submit" value="Extract"/>
+        <input type="submit" value="Dalej"/>
     </form>
-
+    </div>
 {% endblock %}

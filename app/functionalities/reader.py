@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json 
 import os.path
-from plot import make_plot
+from app.functionalities.plot import make_plot
 
 def display_message(message):
     print(message)
@@ -79,12 +79,12 @@ class Reader:
                 break
 
         if saveToFile == True:
-            path = "Data/"+filename+"/"+filename+".json"
+            path = "app/static/data/"+filename+"/"+filename+".json"
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, 'w', encoding='utf-8') as f:
                 json.dump(REVIEWS,f,ensure_ascii=False,indent=4)
                 
-        save_as = "Data/"+filename+"/"+filename+".png"
+        save_as = "app/static/data/"+filename+"/"+filename+".png"
         make_plot(path,save_as)
 
         return REVIEWS

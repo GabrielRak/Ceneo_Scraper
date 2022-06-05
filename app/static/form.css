@@ -1,0 +1,33 @@
+form label {
+  font-size: 18px;
+  color: black;
+}
+
+form input[type="text"] {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.33);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 8px 0px 30px 0px;
+  font-size: 22px;
+}
+
+form input[type="text"]:focus {
+  border-color: orange;
+  outline: none;
+}
+
+form input[type="submit"] {
+  color: white;
+  background-color: orange;
+  width: 140px;
+  height: 40px;
+  border: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=form.css.map */
