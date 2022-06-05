@@ -1,0 +1,25 @@
+table{
+
+    tr{
+
+        td{
+        
+            button{
+                border:none;
+                color:white;
+
+                &.more{
+                    background-color:green;
+                }
+
+                &.delete{
+                    background-color:red;
+                }
+
+            }
+
+        }
+
+    }
+
+}

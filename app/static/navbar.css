@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  padding: 20px 30px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #E67E22;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  padding: 5px 8px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(230, 126, 34, 0.64);
+}
+/*# sourceMappingURL=navbar.css.map */

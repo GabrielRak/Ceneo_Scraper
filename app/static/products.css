@@ -1,0 +1,13 @@
+table tr td button {
+  border: none;
+  color: white;
+}
+
+table tr td button.more {
+  background-color: green;
+}
+
+table tr td button.delete {
+  background-color: red;
+}
+/*# sourceMappingURL=products.css.map */

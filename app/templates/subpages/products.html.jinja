@@ -1,0 +1,28 @@
+{% extends "base.html.jinja" %}
+{%block head%}
+    <title>Products</title>
+    <link rel="stylesheet" href="../static/products.css"/>
+{%endblock%}
+{%block navbar_content%}
+
+    <a href="/">Home</a>
+    <a href="/extract_form">Etract form</a>
+
+{%endblock%}
+{%block container%}
+
+    <div class="container h-50 w-25 text-center">
+        <img src="../../static/assets/icons8-coins-100.png" width="100px" height="100px"/>
+        <h1>Products</h1>
+        <table class="mx-auto">
+        {%for product in products%}
+            <tr>
+                <td>{{product}}</td>
+                <td><a class="nav-link" href="{{url_for('product', product_name=product)}}"><button class="more">More</button></a></td>
+                <td><button class="delete">Delete</button></td>
+            </tr>
+        {%endfor%}
+        </table>
+    </div>
+
+{% endblock %}

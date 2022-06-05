@@ -2,7 +2,10 @@ import os
 import json
 from reader import Reader
 from analyst import Analyst
-from functionalities import display_message
+
+def display_message(message):
+    print(message)
+    input("Press [Enter] key to continue")
 
 class Interface():
     

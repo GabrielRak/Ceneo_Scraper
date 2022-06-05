@@ -1,0 +1,18 @@
+{% extends "base.html.jinja" %}
+{%block head%}
+    <title>Products</title>
+    <link rel="stylesheet" href="../static/products.css"/>
+{%endblock%}
+{%block navbar_content%}
+
+    <a href="/">Home</a>
+    <a href="/extract_form">Extract form</a>
+
+{%endblock%}
+{%block container%}
+    <div class="d-flex flex-column text-center">
+    <h1>{{product_name}}</h1>   
+    <h3>{{data.avg_stars}}</h3>
+    <h3>{{data.avg_recommendations}}</h3>
+    </div>
+{%endblock%}

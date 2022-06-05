@@ -2,14 +2,18 @@ import requests
 from bs4 import BeautifulSoup
 import json 
 import os.path
-from functionalities import display_message
+from plot import make_plot
+
+def display_message(message):
+    print(message)
+    input("Press [Enter] key to continue")
 
 class Reader:
 
-    def __init__(self,):
+    def __init__(self):
         pass
 
-    def Read_Reviews(self,link,saveToFile):
+    def Read_Reviews(self,link,filename,saveToFile):
 
         REVIEWS = []        
 
@@ -75,13 +79,14 @@ class Reader:
                 break
 
         if saveToFile == True:
-            filename = input("What is the nanme of the file:")
-            path = "Data/"+filename+"/"+filename+"_raw_data.json"
+            path = "Data/"+filename+"/"+filename+".json"
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, 'w', encoding='utf-8') as f:
                 json.dump(REVIEWS,f,ensure_ascii=False,indent=4)
-            display_message("Successfully downloaded data about item")
-        
+                
+        save_as = "Data/"+filename+"/"+filename+".png"
+        make_plot(path,save_as)
+
         return REVIEWS
 
 
