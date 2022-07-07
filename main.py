@@ -12,10 +12,8 @@ def Read_Page(URL):
     page = requests.get(URL)
     pageDom = BeautifulSoup(page.content, 'html.parser')
 
-    #Reading form the first page
     for review in pageDom.find_all('div',class_='user-post'):
 
-        #Przypisanie tego i tamtego
         opinion_id = review['data-entry-id']
         author = review.find('span', class_='user-post__author-name').get_text().strip()
         try:
