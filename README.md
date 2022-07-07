@@ -3,6 +3,6 @@
 
 ### Funckjonalności <br/>
 
-**Ekstracja pojedynczego produktu** 
-**Ekstrakcja wszystkich opini o produkcie z pojedynczej strony** 
-**Ekstrakcja wszystkich opini ze wszystkich stron**
+**Ekstracja pojedynczego produktu** <br/>
+**Ekstrakcja wszystkich opini o produkcie z pojedynczej strony** <br/>
+**Ekstrakcja wszystkich opini ze wszystkich stron**<br/>

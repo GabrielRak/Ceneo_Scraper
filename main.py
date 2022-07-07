@@ -8,6 +8,7 @@ REVIEWS = []
 def Read_Page(URL):
 
     
+    #Constans
     counter = 1
     page = requests.get(URL)
     pageDom = BeautifulSoup(page.content, 'html.parser')
